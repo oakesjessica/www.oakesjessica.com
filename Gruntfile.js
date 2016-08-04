@@ -27,6 +27,7 @@ module.exports = function(grunt) {
           pretty: true,
         },
         files: [
+          //  Have index.html compiled into root folder for Github hosting
           {'index.html': 'build/main.jade'},
           {
             cwd: 'build/partials',
