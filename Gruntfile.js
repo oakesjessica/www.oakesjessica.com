@@ -6,7 +6,8 @@ module.exports = function(grunt) {
     //***  WATCH ***//
     watch: {
       grunt: {
-        files: ['Gruntfile.js']
+        files: ['Gruntfile.js'],
+        tasks: ['copy', 'jade', 'sass']
       },
       scripts: {
         files: ['stylesheets/*.scss'],
@@ -60,7 +61,9 @@ module.exports = function(grunt) {
           'bootstrap/dist/css/bootstrap.min.css',
           'bootstrap/dist/css/bootstrap.min.css.map',
           'bootstrap/dist/css/bootstrap-theme.min.css',
-          'bootstrap/dist/css/bootstrap-theme.min.map'
+          'bootstrap/dist/css/bootstrap-theme.min.map',
+          'font-awesome/css/font-awesome.min.css',
+          'font-awesome/fonts/*'
         ],
         'dest': 'public/vendors/'
       }
