@@ -1,4 +1,7 @@
 
+// FONTS
+
+
 // COLORS
 $black: #000000;
 $blanched-almond: #FFEBCD;
@@ -16,8 +19,43 @@ $desktop-min: 980px;
 html, body {
   height: 100%;
   width: 100vw;
-  padding: 0px;
-  margin: 0px;
   font-size: inherit;
   font-family: sans-serif;
+}
+
+header, footer, body, p, h1, h2, h3, h4, h5, h6 {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+header, body, footer {
+  border: 1px solid black;
+}
+
+/**************** FOOTER ****************/
+footer {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+}
+
+.footer-mobile {
+  display: none;
+}
+
+@media screen and (max-width: $phone-max) {
+  .footer-mobile {
+    display: inline;
+  };
+  .footer-desktop {
+    display: none;
+  }
+}
+
+.fa-copyright {
+  padding: 0px 2px;
 }
