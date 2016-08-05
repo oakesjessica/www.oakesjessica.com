@@ -1,10 +1,10 @@
-
 // FONTS
-
+$font-stack: 'Helvetica';
 
 // COLORS
 $black: #000000;
 $blanched-almond: #FFEBCD;
+$ba-dark-purple: #6D3880;
 $white: #FFFFFF;
 
 // MOBILE DIMENSIONS
@@ -14,13 +14,26 @@ $tablet-min: 768px;
 $tablet-max: 979px;
 $desktop-min: 980px;
 
+/************************** GENERAL RULES **************************/
+.text-uppercase {
+  text-transform: uppercase;
+}
 
-// GENERAL
+.small-caps {
+  font-variant: small-caps;
+}
+
+.text-icon {
+  padding: 0px 3px;
+}
+
+/************************** GENERAL **************************/
 html, body {
   height: 100%;
   width: 100vw;
   font-size: inherit;
-  font-family: sans-serif;
+  font-family: $font-stack;
+  background: $blanched-almond;
 }
 
 header, footer, body, p, h1, h2, h3, h4, h5, h6 {
@@ -29,11 +42,47 @@ header, footer, body, p, h1, h2, h3, h4, h5, h6 {
   border: 0px;
 }
 
-header, body, footer {
+//  TESTING
+header, body {
   border: 1px solid black;
 }
 
-/**************** FOOTER ****************/
+footer {
+  border: 1px solid purple;
+}
+
+/************************** SOCIAL LINKS **************************/
+
+.logo {
+  text-decoration: none;
+  color: $black;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.unstyled-ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: inline-block;
+}
+
+.unstyled-li {
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.social-icon {
+  color: $ba-dark-purple;
+  display: inline-block;
+  padding: 8px;
+  border: 2px solid #a8a8a8;
+  border-radius: 50%;
+}
+
+/************************** FOOTER **************************/
 footer {
   font-size: 14px;
   font-weight: bold;
@@ -54,8 +103,4 @@ footer {
   .footer-desktop {
     display: none;
   }
-}
-
-.fa-copyright {
-  padding: 0px 2px;
 }

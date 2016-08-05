@@ -21,6 +21,13 @@ module.exports = function(grunt) {
         tasks: ['jade']
       }
     },
+    //*** UGLIFY ***//
+    // uglify: {
+    //   build: {
+    //     src: 'app.js',
+    //     dest: 'public/assets/js/client.min.js'
+    //   }
+    // },
     //*** JADE ***//
     jade: {
       compile: {
@@ -29,7 +36,7 @@ module.exports = function(grunt) {
         },
         files: [
           //  Have index.html compiled into root folder for Github hosting
-          {'index.html': 'build/main.jade'},
+          {'index.html': 'build/index.jade'},
           {
             cwd: 'build/partials',
             src: '*.jade',
@@ -73,9 +80,10 @@ module.exports = function(grunt) {
   //***  LOAD NPM TASKS ***//
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  // grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-jade');
 
   //***  DEFAULT TASK(S) ***//
-  grunt.registerTask('default', ['copy', 'sass', 'watch', 'jade']);
+  grunt.registerTask('default', ['copy', 'sass', 'jade', 'watch']);
 };
